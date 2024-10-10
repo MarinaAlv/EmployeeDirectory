@@ -22,7 +22,7 @@ app.get('/employees/:id', (req, res) => {
   if (employee) {
     res.send(employee.name);
   } else {
-    res.send('There is not employee with that id.');
+    res.status(404).send('There is not employee with that id.');
   }
 });
 
